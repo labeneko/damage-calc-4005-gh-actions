@@ -27,3 +27,7 @@ jobs:
       with:
         path: ./junit/test-results.xml
       if: always()
+    - uses: sarisia/actions-status-discord@v1
+      if: always()
+      with:
+        webhook: ${{ secrets.DISCORD_WEBHOOK }}
